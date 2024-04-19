@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: rgba(235, 102, 43, 0.05);
+  padding-top: 94px;
+  color: #05073C;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+a, button{
+  transition: 0.2s;
+}
+
+a:hover, button:hover{
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #EB662B;
+}
+
+.container{
+  max-width: 1320px;
+}
+
+/* Skeleton gradient */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(to right, #EB662B, #E7E6E6);
+  background-size: 200% auto;
+  animation: gradient 1s linear infinite;
+}
+
+.swiper-wrapper{
+  margin-bottom: 25px;
+}
+
+.swiper-pagination{
+  bottom: -5px!important;
+}
+.swiper-pagination-bullet{
+  height: 10px!important;
+  width: 10px!important;
+}
+
+.swiper-pagination-bullet-active{
+  background: #EB662B!important;
+}
+
+/* app/tours/[id]/styles.css */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -10px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 10px;
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.next-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.my-masonry-grid_column:last-child {
+  margin-bottom: 0;
+}
+
+.ticket-button{
+  cursor: pointer;
+}
+
+.availability {
+  background-color: orange !important;
+  color: white !important;
+}
+
+.react-calendar{
+  border: none!important;
+}
+
+abbr:where([title]){
+  text-decoration: none!important;
+}
+
+.react-calendar__tile:disabled{
+  background-color: #fff!important;
+}
+
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+  overflow: auto!important;
+  padding-right: 0px !important;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  border: none; /* Remove border */
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #e2ad64;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #e2ad64;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #e2ad64;
+  border: none; /* Removes extra border that FF applies */
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #e2ad64;
+  outline-offset: 0.125rem;
+}
+
